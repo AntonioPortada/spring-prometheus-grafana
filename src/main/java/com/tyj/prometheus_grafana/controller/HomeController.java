@@ -20,4 +20,8 @@ public class HomeController {
         return ResponseEntity.ok("Hello from Spring with Prometheus and Grafana, " + name + "!");
     }
 
+    @GetMapping("/error")
+    public ResponseEntity<String> generateError() {
+        throw new IllegalArgumentException("Error test");
+    }
 }
